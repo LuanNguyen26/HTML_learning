@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài Tập 01 - Buổi 06</title>
+	<meta charset="utf-8">
+	
+</head>
+<body onload="chaomung();">
+<h1>CHÀO MỪNG BẠN ĐẾN VỚI WEBSITE NÀY</h1>
+
+<script>
+  function thu_tv(vngay)
+  {
+      var thu="";
+      switch(vngay.getDay())
+	  {
+	      case 0: thu="Chủ Nhật"; break;
+		  case 1: thu="Thứ hai"; break;
+		  case 2: thu="Thứ ba"; break;
+		  case 3: thu="Thứ tư"; break;
+		  case 4: thu="Thứ năm"; break;
+		  case 5: thu="Thứ sáu"; break;
+		  case 6: thu="Thứ bảy"; break;
+	  }
+	  return thu;
+  }
+  
+  function chaomung()
+  {
+	var d = new Date();
+	var ngay = d.getDate();
+	var thang = d.getMonth()+1;
+	var nam = d.getFullYear();
+	var thu = thu_tv(d);
+	
+	alert("Hôm nay là " + thu + " ngày " + ngay + " Tháng " + thang + " năm " + nam);
+  }
+</script>
+
+</body>
+</html>

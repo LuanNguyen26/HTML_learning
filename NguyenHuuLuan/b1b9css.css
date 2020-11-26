@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{
+	color:#F56CFD;
+}
+/*.gt{
+	color: aliceblue;
+	background-color: #D931D3;
+}
+.lh{
+	color: aliceblue;
+	background-color: #D931D3;
+}*/
+img .top_hoa{
+	float: left;
+	width: 150px;
+}
+/*
+ul li{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	
+}*/
+img .bot_hoa{
+	float: right;
+	margin-left: 10px;
+}
+.bot_tim{
+	color: #A108D3;
+}
+.bot_hong{
+	color: #FF24A5;
+}

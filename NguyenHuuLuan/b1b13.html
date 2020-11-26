@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	<link href="b1b13css.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div id="container">
+	<h1>Xep loai hoc sinh</h1>
+	<div id="trai">	
+		<input type="number" id="t" min="0" max="10" placeholder="Nhap diem toan:"><p></p>
+		<input type="number" id="v" min="0" max="10" placeholder="Nhap diem van:"><p></p>
+		<input type="number" id="a" min="0" max="10" placeholder="Nhap diem anh:"><p></p>
+		<p>Diem TB: <input type="text" value="" id="dtb"/></p>
+		<p>Xep loai HS: <label id="xl"></label></p>
+	</div>
+	<div id="phai">
+		<p></p>
+		<input type="button" value="Tinh diem TB" onClick="dtb.value=tinhdiemTB()">
+		<input type="button" id="delete" value="Xoa het" onClick="">
+	</div>
+	
+</div>
+	<script>
+		function tinhdiemTB(){
+			var x1=document.getElementById('t');
+ 			var x2=document.getElementById('v');
+			var x3=document.getElementById('a');
+			if(x1.value=="" || x2.value=="" || x3.value=="")
+			  {
+			  alert('Chua nhap du so diem!!!');
+			  }
+			 else if(isNaN(x1.value)||isNaN(x2.value)||isNaN(x3.value))
+			 {
+			  alert('Nhap chua chinh xac diem!!!');  
+			 }
+			
+			var tb=document.getElementById("dtb");
+ 			tb=(parseFloat(x1.value)+parseFloat(x2.value)+parseFloat(x3.value))/3;
+ 			var tbfix=tb.toFixed(2);//Lấy 2 số thập phân sau dấu phẩy và làm tròn
+			
+ 			var xltb=document.getElementById("xl");
+ 			if(tbfix>=9.5)
+		 	{
+		  	xltb.innerText='Xuat Sac';
+		 	}
+		 	else if(tbfix>=8.5)
+		 	{
+		  	xltb.innerText='Gioi';
+		 	}
+		 	else if(tbfix>=6.5)
+		 	{
+		  	xltb.innerText='Kha';
+		 	}
+			else if(tbfix>=5)
+			{
+		  	xltb.innerText='Trung binh';
+		 	}
+			else if(tbfix>=4.5)
+			{
+		  	xltb.innerText='Yeu';
+		 	}
+		 	else xltb.innerText='Kem';
+		 	return tbfix;
+		}
+		function xoa(){
+			
+		}
+	</script>
+
+</body>
+</html>

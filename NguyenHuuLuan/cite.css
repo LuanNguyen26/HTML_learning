@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	position: relative;
+}
+.subtitle{
+	letter-spacing: 0.4em;
+}
+#footer{
+	background-color: black;
+	margin: auto;
+}
+h5{
+	color: white;
+}
+#nenlienhe{
+	background-color: black;
+	color:white;
+}
+#nenmanhung{
+	background: greenyellow;
+}

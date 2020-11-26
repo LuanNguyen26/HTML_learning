@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<title>Mui ne do cac kieu</title>
+	<meta charset="utf-8">
+	<link href="b1b17css.css" type="text/css" rel="stylesheet">
+</head>
+	
+<body onload="khoi_dong();">
+	
+<div class="container">
+	<img id="hinh" src="image/halong.jpg"  align="left" onmouseover="hien_tieude();" onmouseout="an_tieude();" onclick="noidung.style.visibility='visible'">
+	<div id="tieude">Vinh Ha Long</div>
+	<div id="noidung" onclick="clearInterval(inter);">
+		<p>Phong cảnh thiên nhiên đẹp hùng vĩ của Hạ Long được tạo nên từ ba yếu tố: Đá, nước và bầu trời. Với hàng nghìn đảo đá lớn, nhỏ mọc lên từ mặt nước xanh ngọc biếc tạo ra một bức tranh thủy mặc khổng lồ. Đây là một đặc ân của thiên nhiên dành cho Hạ Long mà chưa có nơi nào trên thế giới có được. Cũng vì lẽ đó, lựa chọn du lịch Hạ Long luôn là sự ưu tiên hàng đầu của du khách trong nước cũng như quốc tế.
+		</p>
+	</div>
+</div>
+
+	
+<script>
+	var i=1;
+	var inter;
+	function the_hien_hinh()
+	{
+		switch(i)
+		{
+			case 1: hinh.style.filter = "grayscale(100%)"; break;
+			case 2: hinh.style.filter = "blur(5px)"; break;
+			case 3: hinh.style.filter = "invert(100%)"; break;
+			case 4: hinh.style.filter = "opacity(30%)"; break;
+			case 5: hinh.style.filter = "contrast(200%)"; break;
+			case 6: hinh.style.filter = "sepia(100%)"; break;
+			case 7: hinh.style.filter = "drop-shadow(8px 8px 10px gray)";break;
+			case 8: hinh.style.filter = "hue-rotate(90deg)"; break;
+			case 9: hinh.style.filter = "saturate(8)"; break;
+			case 10:hinh.style.filter = "none"; break;
+		}
+		if (i==10)
+		    i=1;
+		else
+		    i++;
+	}
+	function hien_tieude()
+	{
+		var td = document.getElementById("tieude");
+		td.style.left = event.clientX - 140 + "px";
+		td.style.top =  event.clientY + "px";
+		td.style.visibility = "visible";
+	}
+	function an_tieude()
+	{
+		tieude.style.visibility = "hidden";	
+	}
+	function khoi_dong()
+	{
+		inter = setInterval("the_hien_hinh()", 1000);
+	}
+</script>
+</body>
+</html>

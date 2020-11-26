@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin: 0px; padding: 0px;}
+.container {width:600px; margin: 10px auto;}
+.container .chude {
+	width:100%;
+	text-align: center; 
+	color: #B43739;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+.container .hinh {width: 200px;  float: left;}
+.container .hinh img {height: 250px;}
+.container .thongtin {
+	width: 400px;
+	height: 250px;
+	margin-left: 300px;
+	border: 1px solid #000000
+}
+.container .thongtin ul{list-style: none; margin-left: 15px}
+.container .thongtin li{line-height: 3}
+.pl{margin-left: 3.8em;}
+.pls{margin-left: 7em;}

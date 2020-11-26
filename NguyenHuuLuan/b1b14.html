@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	<link href="b1b14css.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<h1>Chuyen doi ki tu</h1>
+<div class="div">
+	<p>Nhap chuoi:<input type="text" id="chuoi" placeholder="..." value=""></p>
+	<p></p>
+		<input type="button" id="hoa" value="HOA" onClick="bth()">
+		<input type="button" id="thuong" value="thuong" onClick="btt()">
+		<input type="button" id="kitudau" value="Ki tu dau" onClick="bktd()">
+		<input type="button" id="xoa" value="xoa" onClick="x()">
+	<p></p>
+	<div id="ketqua"></div>
+</div>
+	
+<script>
+	function bth(){
+		var x1 = chuoi.value;
+		var hoa = x1.toUpperCase();
+		ketqua.innerHTML = x1;
+	}
+	function btt(){
+		var x2 = chuoi.value;
+		var thuong = x2.toLowerCase();
+		ketqua.innerHTML = x2;
+	}
+	function bktd(){
+		var x3 = chuoi.value;
+		var kitudau = x3.toLowerCase.trim();
+		if(str.charAt(0)!="")
+			x3 = x3.charAt(0).toUpperCase() + x3.substring(1);
+		for(int i=0;i<x3.length;i++){
+			if((str.charAt(i)=="")&&(i+1<x3.length))
+				if(x3.charAt(i+1)!="")
+					x3=x3.substring(0,i) + x3.charAt(i+1).toUpperCase() + x3.substring(i+2);
+		}
+		ketqua.innerHTML = x3;
+	}
+</script>
+</body>
+</html>

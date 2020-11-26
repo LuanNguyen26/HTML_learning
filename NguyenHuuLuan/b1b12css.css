@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container{
+	margin: 0px auto;
+	width: 800px;
+}
+#head{
+	width: 300px;
+	float: left;
+	background-color: aqua;
+	text-align: center;
+}
+#notice{
+	text-align: center;
+}
+#body{
+	text-align: center;
+	width: 500px;
+}

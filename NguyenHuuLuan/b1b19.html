@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link href="b1b19css.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+	<div class="otp">
+		<fieldset>
+			<legend>TOÁN LƯỢNG GIÁC</legend>
+			<input type="radio" name="pt" id="pt" value="1" checked> SIN
+			<input type="radio" name="pt" id="pt" value="2"> COS
+			<input type="radio" name="pt" id="pt" value="3"> TAN
+			<input type="radio" name="pt" id="pt" value="4"> COTAG
+		</fieldset>
+	</div>
+	<div class="inp">
+		<div>Nhập độ radius: <input type="number" name="rd" id="rd"></div>
+	</div>
+	<div class="btn">
+		<button type="button" name="th" onclick="th();">Thực Hiện</button>
+	</div>
+	<div id="kq"></div>
+</div>
+<script>
+	function th(){
+		var i=0, toantu"", pi=Math.PI;
+		var deg=parseInt(rd.value);
+		var rad=(deg*pi)/180;
+		for(i=0; i < pt.length; i++)
+		{
+			if (pt[i].checked==true)
+				toantu = pt[i].value;
+		}
+		switch(toantu)
+		{
+			case "1": kq.innerHTML = "Sin("+rad+")" + "=" + Math.sin(rad); break;
+			case "2": kq.innerHTML = "Cos("+rad+")" + "=" + Math.cos(rad); break;
+			case "3": kq.innerHTML = "Tan("+rad+")" + "=" + Math.sin(rad)/Math.cos(rad); break;
+			case "4": kq.innerHTML = "Cotan("+rad+")" + "=" + Math.cos(rad)/Math.sin(rad); break;
+		}
+	}
+</script>	
+</body>
+</html>

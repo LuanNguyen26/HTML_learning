@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title>Từ Điển</title>
+	<meta charset="utf-8">
+	<style>
+		.container {width:600px; margin: 0px auto;}
+		.header {height:70px; line-height:70px; font-size:30px; text-align:center;}
+		.left {float:left; width:200px;}
+		.right{float:right; width:400px;}
+		.container .right label {width:200px; display:inline-block;margin-top:10px;}
+		.container .right input, label {font-size:22px}
+		.container .right .button {margin-top: 20px; text-align:center;}
+		.container .right .button .btn {background-color:#58D3F7; border-radius:10px;}
+		.container .right .message{ font-size:20px; margin-top:20px; text-align:center}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="header">
+		CHƯƠNG TRÌNH MÔ PHỎNG TỪ ĐIỂN
+	</div>
+	<div class="left">
+		<img src="hinh/bia.jpg" id="hinh" width="180px" height="208px" alt="hinh quang cao">
+	</div>
+	<div class="right">
+		<label>Nhập Từ Tiếng Anh</label><input type="text" name="ta" id="ta" size="10">
+		<label>Kết quả:</label><input type="text" name="tv" id="tv" size="10" disabled>
+		<div class="button"><input type="button" name="tratd" value=" Tra Từ " class="btn" onclick="tra_tu_dien(ta.value)"></div>
+		<div class="message" id="message"></div>
+	</div>
+</div>
+<script>
+	var tienganh = ["Table", "Chair", "Book", "Pencil"];
+	var tiengviet= ["Cái bàn", "Cái ghế", "Cuốn sách", "Cây bút chì"];
+	var hinhanh  = ["ban.jpg", "ghe.jpg", "sach.jpg", "butchi.jpg"];
+	function tra_tu_dien(tu)
+	{
+		var i, f=0;
+	   for(i=0; i < tienganh.length; i++)
+	   {
+			 if (tienganh[i].toUpperCase()==tu.toUpperCase())
+			 {
+				f=1;
+				break;
+			 }
+	   }
+	   if (f==1)
+	   {
+			tv.value = tiengviet[i];
+			hinh.src = "hinh/" + hinhanh[i];
+	   }
+	   else
+	   {
+			message.innerHTML="Chưa có từ này trong từ Điển";
+			ta.value="";
+			tv.value="";
+			ta.focus();
+	   }
+	}
+</script>
+</body>
+</html>

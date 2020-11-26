@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<title>In Lịch</title>
+	<meta charset="utf-8">
+	<style>
+		.nam {font-size:24px; color:#FF0000;}
+		.thg {font-size:30px; color:#330066;}
+		.ngy {font-size:80px; color:#FF0000;}
+		.thu {font-size:36px; color:#330066;}
+		.chao {font-size:30px; font-style:italic; color:#ff0000; text-align:center; margin:20px auto;}
+		table {border-collapse:collapse;}
+	</style>
+</head>
+	
+<body onload="mo_trang()">
+	<table border="5px" bordercolor="#B91A1C" cellpadding="5px" cellspacing="5px" align="center" width="180px">
+		<tr align="center">
+			<td>
+				<div id="dnam" class="nam"></div>
+				<div id="dthang" class="thg"></div>
+				<div id="dngay" class="ngy"></div>
+				<div id="dthu" class="thu"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<div id="cauchao" class="chao"></div>
+	<form name="nhap">
+		<table align="center" width="500px" border="1" bordercolor="#330099" cellpadding="5px">
+			<tr align="center">
+				<td>
+					Ngày: <input type="text" name="ngay" id="ngay" size="5">
+					Tháng: <input type="text" name="thang" id="thang" size="5">
+					Năm: <input type="text" name="nam" id="nam" size="10">
+				</td>
+			</tr>
+			<tr align="center">
+				<td>
+					<input type="button" name="in" value=" In Lịch " onclick="sua_lich(ngay.value, thang.value, nam.value)">
+				</td>
+			</tr>
+		</table>
+	</form>
+	
+	<script>
+		function ten_thu(d)
+		{
+			var thu="";
+			switch (d.getDay())
+			{
+				case 0: thu="Chủ nhật"; break;
+				case 1: thu="Thứ hai"; break;
+				case 2: thu="Thứ ba"; break;
+				case 3: thu="Thứ tư"; break;
+				case 4: thu="Thứ năm"; break;
+				case 5: thu="Thứ sáu"; break;
+				case 6: thu="Thứ bảy"; break;
+			}
+			return thu;
+		}
+		function in_lich(pngay, pthang, pnam)
+		{
+			vngay = new Date(pnam, pthang, pngay);
+			dnam.innerHTML = pnam;
+			dthang.innerHTML = "Tháng " + (parseInt(pthang) + 1);
+			dngay.innerHTML = pngay;
+			dthu.innerHTML = ten_thu(vngay);
+		}
+		function mo_trang()
+		{
+			d = new Date();
+			in_lich(d.getDate(), d.getMonth(), d.getFullYear());
+			h = d.getHours();
+			if (h<12)
+				cauchao.innerHTML ="Chào buổi sáng";
+			else if (h<=18)
+				cauchao.innerHTML ="Chào buổi chiều";
+			else if (h<23)
+				cauchao.innerHTML ="Chào buổi tối";
+
+		}
+		function sua_lich(pn, pt, py)
+		{
+			var tl;
+			if (isNaN(parseInt(pn)) && isNaN(parseInt(pt)) && isNaN(parseInt(py)))
+			{
+				alert("Chưa nhập hoặc nhập sai dữ liệu");
+				ngay.focus();
+			}
+			else
+			{
+				tl = confirm("Bạn có muốn in lại lịch không ?");
+				if (tl==true)
+					in_lich(ngay.value, parseInt(thang.value)-1, nam.value);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+	
+	<style>
+		* {margin: 0px; padding: 0px;}
+		.container {width:500px; margin: 10px auto;}
+		
+	</style>
+	
+	<script>
+		$(document).ready(function(){
+			$("#demo").validate({
+				rules:{
+					ho: "required",
+					ten: "required",
+					dc{
+						required: true,
+						minlenght: 10,
+					}
+					sdt{
+						required: true,
+						minlenght: 9,
+						maxlength: 11,
+					}
+					mail{
+						required: true,
+					}
+					mk{
+						required: true,
+						minlenght: 6,
+					}
+					mk2{
+						required: true,
+						minlenght: 6,
+					}
+				}	
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="container">
+	<form id="demo">
+		<b>Ho:</b> <input type="text" name="ho" id="ho" placeholder="Vui long nhap ho"> 
+		<b>Ten:</b> <input type="text" name="ten" id="ten" placeholder="Vui long nhap ten">
+		<b>Dia chi:</b> <input type="text" name="dc" id="dc" placeholder="Vui long nhap dia chi">
+		<b>So dien thoai:</b> <input type="number" name="sdt" id="sdt" placeholder="Vui long nhap sdt">
+		<b>Email:</b> <input type="email" name="mail" id="mail" placeholder="Vui long nhap email">
+		<b>Mat khau:</b> <input type="password" name="mk" id="mk" placeholder="Vui long nhap matkhau">
+		<b>Nhap lai mat khau:</b> <input type="password" name="mk2" id="mk2" placeholder="Vui long nhap lai matkhau">
+		<b>Dieu khoan:</b> <input type="checkbox" name="cbox" id="cbox">
+		<b>Thong tin them:</b> <input type="text" name="ttt" id="ttt" placeholder="Tuy chon">
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<title>Đồng Hồ</title>
+	<meta charset="utf-8">
+	<style>
+
+	</style>
+</head>
+<body onload="khoi_dong()">
+	<table width="700px" border="1" align="center" bordercolor="#999999" cellpadding="10px">
+		<tr align="center" valign="middle">
+			<td width="250px">
+				<img src="#" id="gio1"><img src="#" id="gio2">
+				<img src="#">
+				<img src="#" id="phut1"><img src="#" id="phut2">
+				<img src="#">
+				<img src="#" id="giay1"><img src="#" id="giay2">
+			</td>
+			<td width="450px">
+				<div id="chao"></div>
+			</td>
+		</tr>
+	</table>
+	
+	<script>
+		var minsize=12;
+		var maxsize=50;
+		var so = ["0.png","1.png", "2.png", "3.png","4.png","5.png","6.png","7.png","8.png","9.png"];
+		
+		function hien_loi_chao()
+		{
+			d = new Date();
+			if (d.getHours()<12)
+				chao.innerHTML="Chào Buổi Sáng";
+			else if (d.getHours()<17)
+				chao.innerHTML="Chào Buổi Chiều";
+			else
+				chao.innerHTML = "Chào Buổi Tối";
+			if (minsize<maxsize)
+			{
+				minsize++;
+				chao.style.fontSize = minsize + "px";
+				setTimeout("hien_loi_chao()", 100);
+			}
+		}
+		function blink_chuoi()
+		{
+			if (chao.style.color=="red")
+				chao.style.color="black";
+			else
+				chao.style.color="red";
+			setTimeout("blink_chuoi()", 100);
+		}
+		function tao_dong_ho()
+		{
+			var d = new Date();
+ 			var h = d.getHours();
+			var m = d.getMinutes();
+			var s = d.getSeconds();
+			//xử lý giờ
+			if (h<10){ gio1.src = "hinh/"+so[0]; gio2.src = "hinh/"+so[h];}
+			else
+			{
+				h = h.toString();
+				gio1.src= "hinh/"+so[h.charAt(0)];
+				gio2.src= "hinh/"+so[h.charAt(1)];
+			}
+			//xử lý phút
+			if (m<10){ phut1.src = "hinh/"+so[0]; phut2.src = "hinh/"+so[m];}
+			else
+			{
+				m = m.toString();
+				phut1.src= "hinh/"+so[m.charAt(0)];
+				phut2.src= "hinh/"+so[m.charAt(1)];
+			}
+			//xử lý giây
+			if (s<10){ giay1.src = "hinh/"+so[0]; giay2.src = "hinh/"+so[s];}
+			else
+			{
+				s = s.toString();
+				giay1.src= "hinh/"+so[s.charAt(0)];
+				giay2.src= "hinh/"+so[s.charAt(1)];
+			}
+			if ((h==12 || h==17 || h==23) && m==0 && s==0)
+			{
+				minsize=0;
+				hien_loi_chao();
+			}
+			setTimeout("tao_dong_ho()",1000);
+		}
+		function khoi_dong()
+		{
+			hien_loi_chao();
+			blink_chuoi();
+			tao_dong_ho();
+		}
+	</script>
+</body>
+</html>

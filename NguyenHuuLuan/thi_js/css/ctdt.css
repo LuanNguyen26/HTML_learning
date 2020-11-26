@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin: 0px; padding: 0px;}
+.container {width:800px; margin: 10px auto; padding-top: 10px; background-color: aqua;}
+.chude {color: darkred; font-size: 30px; text-align: center}
+
+.bigols {
+	color: darkred;
+	margin-bottom: 5px;
+	margin-top: 5px; 
+	font-size: 20px; 
+	margin-left: 30px;
+	font-weight: bold;
+}
+.ols {color: #1200FF; margin: 20px 50px; font-weight: bold;}
+hr {width: 250px; margin: 10px 300px;}
+p {margin-left: 250px; font-size: 18px; color: #1200FF;}

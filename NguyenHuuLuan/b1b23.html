@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<link href="b1b22.css" type="text/css" rel="stylesheet">
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#ndt1").hide();
+			$("#tt1").click(function(){
+				$("#ndt1").slideToggle();
+			});
+			$("#ndt2").hide();
+			$("#tt2").click(function(){
+				$("#ndt2").slideToggle();
+			});
+			$("#ndt3").hide();
+			$("#tt3").click(function(){
+				$("#ndt3").slideToggle();
+			});
+			$("#ndt4").hide();
+			$("#tt4").click(function(){
+				$("#ndt4").slideToggle();
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div class="container">
+	<div class="header">Truyện kinh dị</div>
+	<div class="noidung">
+		<div class="tt1" id="tt1">LAPTOP <i class="fas fa-arrow-alt-circle-down"></i></div>
+			<p id="ndt1">Sau khi chơi game khuya, bạn tắt máy. Vừa gập laptop xuống, bạn thấy có người ngồi đối diện với bạn.</p>
+		<div class="tt1" id="tt2">THANG MÁY <i class="fas fa-arrow-alt-circle-down"></i></div>
+			<p id="ndt2">Bạn bước vào thang máy, có một anh chàng đẹp trai đứng sẵn trong đó. Anh ấy lên tầng 14, bạn lên tầng 15. Đến tầng 14, anh ta bước ra ngoài, rút dao, cười điên dại: "Hẹn gặp cô ở tầng trên." Cửa thang máy đóng lại.</p>
+		<div class="tt1" id="tt3">MẸ GỌI <i class="fas fa-arrow-alt-circle-down"></i></div>
+			<p id="ndt3">Bạn nghe mẹ gọi bạn dưới bếp. Nhưng vừa định bước xuống thì trên lầu có tiếng gọi: "Đừng xuống, mẹ cũng nghe thấy tiếng gọi đó!"</p>
+		<div class="tt1" id="tt4">CON MÈO <i class="fas fa-arrow-alt-circle-down"></i></div>
+			<p id="ndt4">Tôi nghĩ con mèo của mình có vấn đề, nó cứ nhìn chằm chằm vào mặt tôi rồi bất động. Cho đến khi tôi nhận ra nó đang nhìn phía sau lưng tôi.</p>
+	</div>
+</div>
+</body>
+</html>

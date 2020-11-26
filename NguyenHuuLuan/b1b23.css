@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+		* {margin: 0px; padding: 0px;}
+		.container {width:500px; margin: 10px auto;}
+		.header {
+			height: 70px;
+			line-height: 70px;
+			text-align: center;
+			font-size: 30px;
+			color: aliceblue;
+			background-color: #000000;
+			font-style: oblique italic;
+		}
+		.noidung {margin-top: 15px;}
+		.tt1 {
+			background-color: chocolate;
+			color: aliceblue;
+			font-size: 16pt;
+			padding: 10px;
+			
+		}

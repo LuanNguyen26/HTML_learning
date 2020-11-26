@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+	.container {
+		width:80%;
+		margin: 0px auto;
+		position:relative;
+	}
+	.container #tieude {
+		position:absolute;
+		color:#eb9f01;
+		font-size:40px;
+        width:550px;
+		font-weight:bold;
+		z-index:3;
+        visibility:hidden;
+	}
+	.container #noidung p {
+		text-align:justify;
+	}	
+    .container #noidung {
+		background-color:#faffca;
+		border:5px dashed #ff9900;
+		position:absolute;
+		left:510px;
+		visibility:hidden;
+		width:450px; 
+		font-family:arial;
+		font-size:12px;
+		padding: 10px;
+		line-height:20px;
+        z-index:2;
+		cursor:pointer;
+	}
+	.container #noidung {
+		background-image: url("image/pccantho.jpg");
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	.container img {
+		cursor:pointer;
+	}

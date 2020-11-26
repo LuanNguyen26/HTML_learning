@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<p>input your name: <input type="text" id="tb"></p>
+	<script>
+		$(document).ready(function(){
+			$("input").keydown (function(){
+				$("#tb").css("background-color", "green")
+			});
+			$("input").keyup (function(){
+				$("#tb").css("background-color", "red")
+			});
+		});
+	</script>
+	
+	<hr style="width: 500px; margin-left: 0">
+	<p class="b2">If you click on the "Hide" button, I will disapper</p>
+	<button id="hide-button">Hide</button>
+	<button id="show-button">Show</button>
+	<script>
+		$(document).ready(function(){
+			$("#hide-button").click (function(){
+				$(".b2").hide();
+			});
+			$("#show-button").click (function(){
+				$(".b2").show();
+			})
+		});
+	</script>
+	
+	<hr style="width: 500px; margin-left: 0">
+	<h1>Welcome to the live of skull</h1>
+	<button style="margin: 0 20px">Click me</button>
+	<table style="border: 3px double #FF0004">
+		<tr>
+			<th></th><th>T2</th><th>T3</th><th>T4</th><th>T5</th><th>T6</th><th>T7</th>
+		</tr>
+		<tr>
+			<th></th>
+		</tr>
+	</table>
+</body>
+</html>

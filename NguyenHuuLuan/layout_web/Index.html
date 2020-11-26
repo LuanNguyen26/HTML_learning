@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Trang Web Ghê Quá</title>
+	<style type="text/css">
+		* {margin: 0; padding: 0;}
+		ol, ul { list-style: none; }
+		div#layout {border: 1px solid #a3a2a3;margin: 20px auto; width: 80%;}
+		div#header {padding: 10px;}
+		div.hLeft {float: left;}
+		div.hLeft h1 {margin-bottom: 20px;}
+		div.hRight {float: right;}
+		div.hRight ul.hButton {margin-bottom: 37px;text-align: right;}
+		div.hRight ul.hButton li {display: inline;}
+		div.hRight ul.hNav {text-align: right;}
+		div.hRight ul.hNav li {display: inline;border-right: solid 1px #333;    padding: 0 5px;}
+		div.hRight ul.hNav li.last {border-right:none; padding-right: 0;}
+		div#gNav {clear: both;}
+		div#gNav ul {background: url(images/nen.jpg) repeat-x; border: 1px solid #000;
+	                 height: 22px;padding: 12px 0;}
+		div#gNav ul li {border-right: solid 1px #fff; display: inline; padding: 0 10px;}
+		div#gNav ul li.last {border-right: none;padding-right: 0;}
+		div#gNav ul li a {color: #fff; font-weight: bold;text-decoration: none;}
+		div#gNav ul li a:hover {color: #ccff00;}
+		div#pageBody {padding: 20px 10px;}
+		div#content {float: left;width: 75%;}
+		div#content h2 {border-bottom: 1px solid #666666;font-size: 120%;   margin-bottom: 10px;}
+		div#content div.newProduct {margin-bottom: 20px;}
+		div#content div.newProduct p.image {float: left; width:40%;}
+		div#content div.newProduct div {float: right; width:60%;}
+		div#content div.newProduct div h3 {color: #5870e6; margin-bottom: 10px;}
+		div#content div.newProduct div p {margin-right:15px}
+		div#content ul.thumbList {background: #f9f8f8; border: 1px solid #ebeaea;
+    clear: both;margin-bottom: 40px;padding: 10px 25px;}
+	div#content ul.thumbList li {display: inline;  padding-right: 10px;}
+	div#content ul.thumbList li.last {padding-right: 0;}
+	div#content dl.news {padding: 10px 0 30px 10px;}
+	div#content dl.news dd {border-bottom: 1px dotted #000;margin-bottom: 10px; padding-bottom: 5px;}
+	div#content dl.news dd.last {border-bottom: none;margin-bottom: 0;padding-bottom: 0;}
+	div#content dl.news dd a {text-decoration: none;}
+    div#content dl.news dd a:hover {text-decoration: underline;}
+	div#content p.banner {	text-align: center;}
+	div#sidebar {float: right;width: 25%;}
+	div#sidebar h2 {border-bottom: 1px solid #666666;font-size: 120%;margin-bottom: 10px;}
+	div#sidebar ul.linkList {padding: 0 0 30px 10px;}
+	div#sidebar ul.linkList li {list-style-image: url(images/ico_arrow.png);
+	padding-left: 15px;margin-bottom: 5px;}
+	div#sidebar ul.bannerList {	padding-top: 10px;}
+	div#sidebar ul.bannerList li {padding-bottom: 10px;}
+	div#footer {border-top: 1px solid #a3a2a2; clear: both;	margin-top: 40px;padding: 10px;}
+	div#footer div.fLeft {float: left;width: 50%;}
+	div#footer div.fRight {float: right;width: 50%;}
+	div#footer div.fRight ul {margin-bottom: 10px;text-align: right;}
+	div#footer div.fRight ul li {display: inline; border-right: solid 1px #333;
+    padding: 0 5px;}
+	div#footer div.fRight ul li.last { border-right: none; padding-right: 0;}
+	div#footer div.fRight p {text-align: right;}
+	div#pageBody,div#content div.newProduct,div#footer {zoom: 1;}
+	div#pageBody:after, div#content div.newProduct:after, div#footer:after {
+    clear: both; content: "."; display: block; height: 0;  line-height: 0;   visibility: hidden;}
+	
+	</style>
+</head>
+	
+<body>
+<div id="layout">
+	<!-- Header -->
+	<div id="header">
+		<div class="hLeft">
+			<h1><img src="images/img_logo.gif" alt="" /></h1>
+			<p>www.bytehost.thucung.com</p>
+		</div>
+		<div class="hRight">
+			<ul class="hButton">
+				<li><a href="#"><img src="images/btn_name01.gif" alt="" /></a></li>
+				<li><a href="#"><img src="images/btn_name02.gif" alt="" /></a></li>
+			</ul>
+			<ul class="hNav">
+				<li><a href="#">link 01</a></li>
+				<li><a href="#">link 02</a></li>
+				<li><a href="#">link 03</a></li>
+				<li class="last"><a href="#">link 04</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Menu -->
+	<div id="gNav">
+		<ul>
+			<li><a href="#">TRANG CHỦ</a></li>
+			<li><a href="#">GIỚI THIỆU</a></li>
+			<li><a href="#">SẢN PHẨM</a></li>
+			<li><a href="#">DỊCH VỤ</a></li>
+			<li class="last"><a href="#">LIÊN HỆ</a></li>
+		</ul>
+	</div>
+	<!--Page Body-->
+	<div id="pageBody">
+		<div id="content">
+			<h2>Sản phẩm mới</h2>
+			<div class="newProduct">
+				<p class="image"><img src="images/img_products_new01.jpg" alt="" /></p>
+				<div>
+					<h3>Tên sản phẩm</h3>
+					<p>Text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm text giới thiệu sản phẩm.</p>
+				</div>
+			</div>
+			<ul class="thumbList">
+				<li><a href="#"><img src="images/img_products01.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/img_products02.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/img_products03.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/img_products04.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/img_products05.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="images/img_products05.jpg" alt="" /></a></li>
+				<li class="last"><a href="#"><img src="images/img_products05.jpg" alt="" /></a></li>
+				
+			</ul>
+
+			<h2>Tin tức</h2>
+			<dl class="news">
+				<dt>07/05/2012</dt>
+				<dd><a href="#">Tin mới tin mới tin mới tin mới tin mới tin mới tin mới.</a></dd>
+				<dt>07/05/2012</dt>
+				<dd><a href="#">Tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới.</a></dd>
+				<dt>07/05/2012</dt>
+				<dd class="last"><a href="#">Tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới tin mới.</a></dd>
+			</dl>
+			<p class="banner"><a href="#"><img src="images/bnr_name01.gif" alt="" /></a></p>
+		</div>
+		<div id="sidebar">
+			<h2>Link liên quan</h2>
+			<ul class="linkList">
+				<li><a href="#">Link liên quan 01</a></li>
+				<li><a href="#">Link liên quan 02</a></li>
+				<li><a href="#">Link liên quan 03</a></li>
+				<li><a href="#">Link liên quan 04</a></li>
+				<li><a href="#">Link liên quan 05</a></li>
+				<li><a href="#">Link liên quan 06</a></li>
+			</ul>
+			<h2>Link liên quan</h2>
+			<ul class="bannerList">
+				<li><a href="#"><img src="images/bnr_name02.gif" alt="" /></a></li>
+				<li><a href="#"><img src="images/bnr_name03.gif" alt="" /></a></li>
+				<li><a href="#"><img src="images/bnr_name04.gif" alt="" /></a></li>
+			</ul> 
+
+		</div>
+	</div>
+	<!-- Footer -->
+	<div id="footer">
+		<div class="fLeft">
+			<p>TÊN CÔNG TY</p>
+			<p>Địa chỉ: 123 abc, phường X, quận Y, tp.Z<br />
+				  Điện thoại: 012.3456789</p>
+			<p>Email: <a href="mailto:support@hocwebchuan.com"> support@hocwebchuan.com </a> </p>
+		</div>
+		<div class="fRight">
+			<ul>
+			<li><a href="#">Link 01</a></li>
+			<li><a href="#">Link 02</a></li>
+			<li><a href="#">Link 03</a></li>
+			<li class="last"><a href="#">Link 04</a></li>
+			</ul>
+			<p>Copyright (c) 2020 Tên công ty</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Untitled Document</title>
+	
+</head>
+
+<body>
+<div id="container">
+	<div id="head">	
+	<label>Input dollar: </label>
+	<input type="number" id="st" min="1" max="1000" value="" required>
+	<input type="button" id="change" value="Change money" onClick="function1">
+	<div id="notice"></div>
+	</div>
+	
+	<div id="body">
+	<h2>Cac loai tien co the doi</h2>
+	<p><b>100$</b><span id="t100"></span></p>
+	<p><b>50$</b><span id="t50"></span></p>
+	<p><b>20$</b><span id="t20"></span></p>
+	<p><b>10$</b><span id="t10"></span></p>
+	<p><b>5$</b><span id="t5"></span></p>
+	<p><b>2$</b><span id="t2"></span></p>
+	<p><b>1$</b><span id="t1"></span></p>
+	</div>
+</div>
+<script>
+		function function1{
+			if(st.checkValidity()){
+				notice.innerHTML = "";
+				var s = parseInt(st.value);
+			}
+			else{
+				notice.innerHTML = "Warning: Input value!!!";
+			}
+		}
+		document.write{
+			Math.floor
+		}
+	</script>
+</body>
+</html>

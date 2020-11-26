@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1{text-align: center;}
+h3{
+    text-align: center; 
+    color: #08829B;
+}
+h2{color: #08829B;}
+#div1{color: #08829B;}
+.li1{
+    list-style-type: square;
+    line-height: 3;
+    font-size: 18px;
+    text-align: left;
+}
+#div2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+#card{
+    margin-top: 30px; 
+    margin-bottom: 80px;
+}
+.card-body{text-align: center;}
+.card-title{
+    font-size: 20px; 
+    font-weight: bold;
+}
+.card-text{text-align: left;}
+.span1{
+    color: #E8FF00;
+    font-size: 20px;
+}
+.btn btn-primary{text-align: center;}
+#card2{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.ul1{list-style:  none;}
